@@ -185,11 +185,11 @@ pre {
 }
 
 div#footer {
-	font-size: small;
-	border-top: 1px solid #c0c0c0;
-	padding-top: 0.1em;
-	margin-top: 4.0em;
-	color: #c0c0c0;
+	font-size: 0.82rem;
+	border-top: 1px solid #d8dee4;
+	padding-top: 1em;
+	margin-top: 4em;
+	color: #7f8b95;
 }
 
 div#footer a {
@@ -199,6 +199,39 @@ div#footer a {
 div#footer-text {
 	float: left;
 	padding-bottom: 8px;
+}
+
+.footer-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75em;
+	text-align: center;
+}
+
+.footer-meta {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.45em 1.1em;
+	line-height: 1.4;
+}
+
+.visitor-map {
+	width: 120px;
+	max-width: 38vw;
+	opacity: 0.72;
+	transition: opacity 0.2s ease;
+}
+
+.visitor-map:hover {
+	opacity: 0.95;
+}
+
+.visitor-map img,
+.visitor-map canvas {
+	max-width: 100%;
+	height: auto;
 }
 
 ul, ol, dl {
