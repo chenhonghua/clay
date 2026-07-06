@@ -218,10 +218,17 @@ div#footer-text {
 }
 
 .visitor-map {
-	width: 120px;
-	max-width: 38vw;
+	width: 180px;
+	max-width: 52vw;
 	opacity: 0.72;
 	transition: opacity 0.2s ease;
+}
+
+.visitor-map-title {
+	margin-bottom: 0.35em;
+	color: #8b98a5;
+	font-size: 0.78rem;
+	letter-spacing: 0;
 }
 
 .visitor-map:hover {
