@@ -151,259 +151,432 @@
 </div>
 
 
-<h2>
-    Recent Publications (<sup>#</sup> corresponding author, <sup>*</sup> joint-first author)
-  [<a href="https://scholar.google.com/citations?user=S7yyHpAAAAAJ&hl=en" target="_blank">Google Scholar</a>]
-</h2>
-
+<h2>Publications</h2>
+<p>Selected papers are organized into a cleaner theme-separated layout. Kindly check the full list  [<a href="https://scholar.google.com/citations?user=S7yyHpAAAAAJ&hl=en" target="_blank">Google Scholar</a>].</p>
+<p class="pub-legend"><sup>†</sup> corresponding author, <sup>‡</sup> co-first author.</p>
 <style>
-/* ✅ 统一媒体单元格宽度与样式 */
-#tbPublications td.media-cell {
-  width: 240px;
+.pub-legend {
+  margin-top: -4px;
+  margin-bottom: 4px;
+  line-height: 1.1;
+  font-size: 0.9em;
+  color: #6b7785;
+}
+.publication-list {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  margin: 20px 0 30px;
+}
+.publication-list td {
+  padding: 0;
+}
+.publication-list td:first-child {
+  width: 220px;
+  min-width: 220px;
   vertical-align: top;
+  padding: 0 18px 0 0;
+}
+.publication-list td:nth-child(2) {
+  vertical-align: top;
+  padding: 0 0 12px 0;
+}
+.publication-list .year-row td {
+  padding: 14px 0 8px 0;
+}
+.publication-list .year-separator {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.publication-list .year-separator hr {
+  flex: 1;
+  border: 0;
+  border-bottom: 1px solid #d6d6d6;
+  margin: 0;
+}
+.publication-list .year-separator span {
+  font-size: 1.35em;
+  line-height: 1;
+  color: #bbbbbb;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.publication-list .section-row td {
+  padding: 10px 0 4px 0;
+}
+.publication-list .section-row {
+  cursor: pointer;
+  user-select: none;
+}
+.publication-list .section-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92em;
+  font-weight: 700;
+  color: #445668;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.publication-list .section-title::before {
+  content: "▾";
+  display: inline-block;
+  width: 0.9em;
+  color: #777;
+  font-size: 0.85em;
+}
+.publication-list .section-row.collapsed .section-title::before {
+  content: "▸";
+}
+.publication-list .section-row:hover .section-title {
+  color: #2f5f8f;
+}
+.publication-list .pub-thumb {
+  display: block;
+  width: 220px;
+  height: 125px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e1e6ec;
+  box-shadow: 0 1px 4px rgba(31, 45, 61, 0.06);
+  border-radius: 6px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.publication-list .pub-thumb img,
+.publication-list .pub-thumb video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 4px;
+}
+.publication-list .pub-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #f6f7f9;
+  color: #9aa5b1;
+  font-size: 0.85em;
   text-align: center;
 }
-
-/* ✅ 统一图片与视频尺寸、比例与样式 */
-#tbPublications .pub-media {
-  width: 240px;
-  height: 160px;
-  object-fit: contain;
-  box-shadow: 4px 4px 8px #888;
-  border-radius: 6px;
+.publication-list .pub-content {
+  padding: 1px 0 14px 0;
+  border-bottom: 1px solid #edf0f4;
 }
-
-/* ✅ 表格整体美化（可选） */
-#tbPublications {
-  width: 100%;
-  border-spacing: 16px 20px;
+.publication-list .pub-title {
+  font-weight: 650;
+  font-size: 1em;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+.publication-list .pub-title a {
+  color: #234f7d;
+  text-decoration: none;
+}
+.publication-list .pub-title a:hover {
+  text-decoration: underline;
+}
+.publication-list .pub-authors {
+  color: #4f5f6f;
+  font-size: 0.95em;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+.publication-list .pub-venue {
+  color: #687789;
+  font-size: 0.9em;
+  font-style: italic;
+}
+.publication-list .pub-links {
+  margin-top: 4px;
+  font-size: 0.9em;
 }
 </style>
-
-<table id="tbPublications">
-  <tbody>
-
-	   <tr>
-      <td class="media-cell">
-        <img src="./paperinfo/partsam.png" class="pub-media">
-      </td>		
-      <td>
-        <a href="https://arxiv.org/pdf/2509.21965" target="_blank">
-          <b>PartSAM:</b> A Scalable Promptable Part Segmentation Model Trained on Native 3D Data
-        </a><br>
-        Zhe Zhu, Le Wan, Rui Xu, Yiheng Zhang, <b>Honghua Chen</b>, Zhiyang Dou, Cheng Lin, Yuan Liu, and Mingqiang Wei.<br>
-        <em>ICLR 2026</em>.
-        <p></p>
-        <p>
-          [<a href="https://github.com/czvvd/PartSAM">code</a>] 
-          [<a href="https://czvvd.github.io/PartSAMPage/">Project Page</a>]
-        </p>
-      </td>
-    </tr>
-
-	  <tr>
-      <td class="media-cell">
-        <video class="pub-media" muted autoplay loop>
-          <source src="./paperinfo/dancing_wo_camera.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </td>		
-      <td>
-        <a href="https://arxiv.org/abs/2508.10893" target="_blank">
-          <b>STream3R:</b> Scalable Sequential 3D Reconstruction with Causal Transformer
-
-        </a><br>
-        Yushi Lan, Yihang Luo, Fangzhou Hong, Shangchen Zhou, <b>Honghua Chen</b>, Zhaoyang Lyu, Shuai Yang, Bo Dai, Chen Change Loy, and Xingang Pan.<br>
-        <em>ICLR 2026</em>.
-        <p></p>
-        <p>
-          [<a href="https://github.com/NIRVANALAN/STream3R">code</a>] 
-          [<a href="https://nirvanalan.github.io/projects/stream3r/">Project Page</a>]
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="media-cell">
-        <video class="pub-media" muted autoplay loop>
-          <source src="./paperinfo/TVCG-2026-CoreEditor-small.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </td>			
-      <td>
-        <a href="https://arxiv.org/abs/2508.11603" target="_blank">
-          <b>CoreEditor:</b> Consistent 3D Editing via Correspondence-constrained Diffusion
-        </a><br>
-        Zhe Zhu, <b>Honghua Chen</b><sup>#</sup>, Peng Li, and Mingqiang Wei .<br>
-        <em>IEEE TVCG 2026</em>.
-        <p></p>
-        <p>
-          [<a href="https://github.com/czvvd/CoreEditor">code</a>] 
-        </p>
-      </td>
-    </tr>
-	  
-	  <tr>
-      <td class="media-cell">
-        <img src="./paperinfo/AAAI-2026-Bridgeshape.png" class="pub-media">
-      </td>		
-      <td>
-        <a href="https://arxiv.org/pdf/2506.23205" target="_blank">
-          <b>BridgeShape:</b> Latent Diffusion Schrödinger Bridge for 3D Shape Completion
-        </a><br>
-        Dequan Kong, <b>Honghua Chen</b><sup>#</sup>, Zhe Zhu, and Mingqiang Wei .<br>
-        <em>AAAI 2026</em>.
-        <p></p>
-        <p>
-          [<a href="https://github.com/kizzyk/BridgeShape">code</a>] 
-        </p>
-      </td>
-    </tr>
-	  
-	  <tr>
-      <td class="media-cell">
-        <video class="pub-media" muted autoplay loop>
-          <source src="./paperinfo/ArtiLatent_ood_demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </td>		
-      <td>
-        <a href="https://arxiv.org/abs/2510.21432" target="_blank">
-          <b>ArtiLatent:</b> Realistic Articulated 3D Object Generation via Structured Latents
-        </a><br>
-        <b>Honghua Chen</b>, Yushi Lan, Yongwei Chen, and Xingang Pan.<br>
-        <em>SIGGRAPH Asia 2025</em>.
-        <p></p>
-        <p>
-          [<a href="https://github.com/chenhonghua/ArtiLatent">code</a>] 
-          [<a href="https://chenhonghua.github.io/MyProjects/ArtiLatent/">Project Page</a>]
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="media-cell">
-        <img src="./paperinfo/CVPR2025-teaser.png" class="pub-media">
-      </td>		
-      <td>
-        <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Li_STAR-Edge_Structure-aware_Local_Spherical_Curve_Representation_for_Thin-walled_Edge_Extraction_CVPR_2025_paper.pdf" target="_blank">
-          <b>STAR-Edge:</b> Structure-aware Local Spherical Curve Representation for Thin-walled Edge Extraction from Unstructured Point Clouds
-        </a><br>
-        <b>Zikuan Li</b><sup>*</sup>, <b>Honghua Chen</b><sup>*</sup>, Yuecheng Wang, Sibo Wu, Mingqiang Wei, and Jun Wang.<br> 
-        <em>CVPR 2025</em>.
-        <p></p>
-        <p>
-          [<a href="https://github.com/Miraclelzk/STAR-Edge">code and data</a>]
-        </p>
-      </td>
-    </tr>
-
-	<tr>
-      <td class="media-cell">
-        <img src="./paperinfo/ICCV2025-rare.png" class="pub-media">
-      </td>		
-      <td>
-        <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Zheng_RARE_Refine_Any_Registration_of_Pairwise_Point_Clouds_via_Zero-Shot_ICCV_2025_paper.pdf" target="_blank">
-          <b>RARE</b>: Refine Any Registration of Pairwise Point Clouds via Zero-Shot Learning
-        </a><br>
-        Chengyu Zheng, Jin Huang, <b>Honghua Chen</b><sup>#</sup>, and Mingqiang Wei<sup>#</sup>.<br> 
-        <em>ICCV 2025</em>.
-        <p></p>
-        <p>
-          [<a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Zheng_RARE_Refine_Any_Registration_of_Pairwise_Point_Clouds_via_Zero-Shot_ICCV_2025_paper.pdf">code</a>]
-        </p>
-      </td>
-    </tr>
-	  
-	  <tr>
-      <td class="media-cell">
-        <img src="./paperinfo/ICCV2025-morphing.gif" class="pub-media">
-      </td>		
-      <td>
-        <a href="https://arxiv.org/pdf/2502.14316" target="_blank">
-          Textured 3D Regenerative Morphing with 3D Diffusion Prior
-        </a><br>
-        Songlin Yang, Yushi Lan, <b>Honghua Chen</b>, and Xingang Pan.<br> 
-        <em>ICCV 2025</em>.
-        <p></p>
-        <p>
-          [<a href="https://github.com/Songlin1998/Textured-3D-DiffMorpher">code</a>]
-		  [<a href="https://songlin1998.github.io/Textured-3D-Morphing/">Project Page</a>]
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="media-cell">
-        <video class="pub-media" muted autoplay loop>
-          <source src="./paperinfo/mvdrag-sparrow.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </td>		
-      <td>
-        <a href="https://arxiv.org/abs/2410.16272" target="_blank">
-          <b>MvDrag3D:</b> Drag-based Creative 3D Editing via Multi-view Generation-Reconstruction Priors
-        </a><br>
-        <b>Honghua Chen</b>, Yushi Lan, Yongwei Chen, Yifan Zhou, and Xingang Pan.<br>
-        <em>arXiv preprint 2024</em>.
-        <p></p>
-        <p>
-          [<a href="https://github.com/chenhonghua/MvDrag3D">code</a>] 
-          [<a href="https://chenhonghua.github.io/MyProjects/MvDrag3D/">Project Page</a>]
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="media-cell">
-        <img src="./paperinfo/NeRF_inpaint.png" class="pub-media">
-      </td>		
-      <td>
-        <a href="https://arxiv.org/abs/2405.02859" target="_blank">
-          <b>MVIP-NeRF:</b> Multi-view 3D Inpainting on NeRF Scenes via Diffusion Prior
-        </a><br>
-        <b>Honghua Chen</b>, Chen Change Loy, and Xingang Pan.<br>
-        <em><b>CVPR</b> 2024</em>.
-        <p></p>
-        <p>[<a href="https://github.com/chenhonghua/MVIP-NeRF">code</a>]</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="media-cell">
-        <img src="./paperinfo/TOMM.png" class="pub-media">
-      </td>		
-      <td>
-        <a href="https://chenhonghua.github.io/clay.github.io/" target="_blank">
-          <b>Geometric and Learning-based Mesh Denoising:</b> A Comprehensive Survey
-        </a><br>
-        <b>Honghua Chen</b>, Zhiqi Li, Mingqiang Wei, and Jun Wang.<br>
-        <em>ACM Transactions on Multimedia Computing, Communications and Applications</em>.
-        <p></p>
-        <p>
-          [<a href="https://github.com/chenhonghua/Mesh-Denoiser">data</a>]
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="media-cell">
-        <img src="./paperinfo/teaser_ICCV2023.png" class="pub-media">
-      </td>		
-      <td>
-        <a href="https://github.com/czvvd/SVDFormer" target="_blank">
-          <b>SVDFormer:</b> Complementing Point Cloud via Self-view Augmentation and Self-structure Dual-generator
-        </a><br>
-        Zhe Zhu, <b>Honghua Chen</b>, Xing He, Weiming Wang, Jing Qin, and Mingqiang Wei.<br>
-        <em><b>ICCV</b> 2023</em>.
-        <p></p>
-        <p>[<a href="https://github.com/czvvd/SVDFormer">code</a>]</p>
-      </td>
-    </tr>
-
-  </tbody>
+<table class="publication-list"><tbody>
+<tr class="section-row"><td colspan="2"><div class="section-title">3D Editing &amp; Generation</div></td></tr>
+<tr>
+<td><div class="pub-thumb"><video class="pub-media" muted autoplay loop><source src="./paperinfo/TVCG-2026-CoreEditor-small.mp4" type="video/mp4"></video><div class="pub-placeholder" style="display:none;">No preview</div></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://scholar.google.com/scholar?q=CoreEditor+Consistent+3D+Editing+via+Correspondence-constrained+Diffusion" target="_blank">CoreEditor: Consistent 3D Editing via Correspondence-Constrained Diffusion</a></div>
+<div class="pub-authors">Zhe Zhu, <span class="pub-author-marker">Honghua Chen<sup>†</sup></span>, Peng Li, and Mingqiang Wei</div>
+<div class="pub-venue">IEEE TVCG, 2026 [<a href="https://github.com/czvvd" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><video class="pub-media" muted autoplay loop><source src="./paperinfo/ArtiLatent_ood_demo.mp4" type="video/mp4"></video></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://scholar.google.com/scholar?q=ArtiLatent+Realistic+Articulated+3D+Object+Generation+via+Structured+Latents" target="_blank">ArtiLatent: Realistic Articulated 3D Object Generation via Structured Latents</a></div>
+<div class="pub-authors"><span class="pub-author-marker">Honghua Chen</span>, Yushi Lan, Yongwei Chen, and Xingang Pan</div>
+<div class="pub-venue">SIGGRAPH Asia, 2025 [<a href="https://github.com/chenhonghua/ArtiLatent" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/ICCV2025-morphing.gif" alt="Textured 3D Morphing"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://scholar.google.com/scholar?q=Textured+3D+Regenerative+Morphing+with+3D+Diffusion+Prior" target="_blank">Textured 3D Regenerative Morphing with 3D Diffusion Prior</a></div>
+<div class="pub-authors">Songlin Yang, Yushi Lan, <span class="pub-author-marker">Honghua Chen</span>, and Xingang Pan</div>
+<div class="pub-venue">ICCV, 2025 [<a href="https://github.com/Songlin1998/Textured-3D-DiffMorpher" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><video class="pub-media" muted autoplay loop><source src="./paperinfo/mvdrag-sparrow.mp4" type="video/mp4"></video></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://scholar.google.com/scholar?q=MvDrag3D+Drag-based+Creative+3D+Editing+via+Multi-view+Generation-Reconstruction+Priors" target="_blank">MvDrag3D: Drag-Based Creative 3D Editing via Multi-View Generation-Reconstruction Priors</a></div>
+<div class="pub-authors"><span class="pub-author-marker">Honghua Chen</span>, Yushi Lan, Yongwei Chen, Yifan Zhou, and Xingang Pan</div>
+<div class="pub-venue">arXiv preprint, 2024 [<a href="https://github.com/chenhonghua/MvDrag3D" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/NeRF_inpaint.png" alt="MVIP-NeRF"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://scholar.google.com/scholar?q=MVIP-NeRF+Multi-view+3D+Inpainting+on+NeRF+Scenes+via+Diffusion+Prior" target="_blank">MVIP-NeRF: Multi-View 3D Inpainting on NeRF Scenes via Diffusion Prior</a></div>
+<div class="pub-authors"><span class="pub-author-marker">Honghua Chen</span>, Chen Change Loy, and Xingang Pan</div>
+<div class="pub-venue">CVPR, 2024 [<a href="https://github.com/chenhonghua/MVIP-NeRF" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr class="section-row"><td colspan="2"><div class="section-title">3D Reconstruction &amp; Registration</div></td></tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/ICML_2026.png" alt="RGGT"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://scholar.google.com/scholar?q=RGGT+Generative-Prior-Guided+Transformer+for+Unified+Rigid+and+Non-Rigid+Point+Cloud+Registration" target="_blank">RGGT: A Generative-Prior-Guided Transformer for Unified Rigid and Non-Rigid Point Cloud Registration</a></div>
+<div class="pub-authors">Chengyu Zheng, Songlin Yang, Jin Huang, <span class="pub-author-marker">Honghua Chen</span>, Weiming Wang, Haoran Xie, Fu Lee Wang, and Mingqiang Wei</div>
+<div class="pub-venue">ICML 2026</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><video class="pub-media" muted autoplay loop><source src="./paperinfo/dancing_wo_camera.mp4" type="video/mp4"></video></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://scholar.google.com/scholar?q=STream3R+Scalable+Sequential+3D+Reconstruction+with+Causal+Transformer" target="_blank">STream3R: Scalable Sequential 3D Reconstruction with Causal Transformer</a></div>
+<div class="pub-authors">Yushi Lan, Yihang Luo, Fangzhou Hong, Shangchen Zhou, <span class="pub-author-marker">Honghua Chen</span>, Zhaoyang Lyu, Shuai Yang, Bo Dai, Chen Change Loy, and Xingang Pan</div>
+<div class="pub-venue">ICLR, 2026 [<a href="https://github.com/NIRVANALAN/STream3R" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/ICCV2025-rare.png" alt="RARE"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://scholar.google.com/scholar?q=RARE+Refine+Any+Registration+of+Pairwise+Point+Clouds+via+Zero-Shot+Learning" target="_blank">RARE: Refine Any Registration of Pairwise Point Clouds via Zero-Shot Learning</a></div>
+<div class="pub-authors">Chengyu Zheng, Jin Huang, <span class="pub-author-marker">Honghua Chen<sup>†</sup></span>, and Mingqiang Wei<sup>†</sup></div>
+<div class="pub-venue">ICCV, 2025 [<a href="https://github.com/zhengcy-lambo/RARE" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/RegiFormer-2024.png" alt="RegiFormer"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10613860/" target="_blank">RegiFormer: Unsupervised Point Cloud Registration via Geometric Local-to-Global Transformer and Self-Augmentation</a></div>
+<div class="pub-authors">Chengyu Zheng, Mengjiao Ma, Zhilei Chen, <span class="pub-author-marker">Honghua Chen</span>, Weiming Wang, and Mingqiang Wei</div>
+<div class="pub-venue">IEEE TGRS, 2024</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/siggraph-2022.png" alt="ImLoveNet"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3528233.3530744" target="_blank">ImLoveNet: Misaligned Image-Supported Registration Network for Low-Overlap Point Cloud Pairs</a></div>
+<div class="pub-authors"><span class="pub-author-marker">Honghua Chen</span>, Zeyong Wei, Yabin Xu, Mingqiang Wei, and Jun Wang</div>
+<div class="pub-venue">SIGGRAPH, 2022</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/CGF-2022.png" alt="UTOPIC"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14659" target="_blank">UTOPIC: Uncertainty-Aware Overlap Prediction Network for Partial Point Cloud Registration</a></div>
+<div class="pub-authors">Zhilei Chen, <span class="pub-author-marker">Honghua Chen<sup>†</sup></span>, Lina Gong, Xuefeng Yan, Jun Wang, Yanwen Guo, Jing Qin, and Mingqiang Wei<sup>†</sup></div>
+<div class="pub-venue">CGF, 2022 [<a href="https://github.com/ZhileiChen99/UTOPIC" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/RAL-2021.png" alt="RGB-D Reconstruction"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9468706/" target="_blank">Robust and Accurate RGB-D Reconstruction with Line Feature Constraints</a></div>
+<div class="pub-authors">Yabin Xu, Laishui Zhou, Hao Tang, Qiaoyun Wu, Qian Xie, <span class="pub-author-marker">Honghua Chen</span>, and Jun Wang</div>
+<div class="pub-venue">IEEE RA-L, 2021</div>
+</td>
+</tr>
+<tr class="section-row"><td colspan="2"><div class="section-title">3D Low-Level Processing</div></td></tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/AAAI-2026-Bridgeshape.png" alt="BridgeShape"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/37493" target="_blank">BridgeShape: Latent Diffusion Schrödinger Bridge for 3D Shape Completion</a></div>
+<div class="pub-authors">Dequan Kong, <span class="pub-author-marker">Honghua Chen<sup>†</sup></span>, Zhe Zhu, and Mingqiang Wei</div>
+<div class="pub-venue">AAAI, 2026 [<a href="https://github.com/kizzyk/BridgeShape" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/TOG_denoising.png" alt="Point Cloud Denoising"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3730891" target="_blank">Revisiting Tradition and Beyond: A Customized Bilateral Filtering Framework for Point Cloud Denoising</a></div>
+<div class="pub-authors">Peng Li, Zeyong Wei, <span class="pub-author-marker">Honghua Chen</span>, Xuefeng Yan, and Mingqiang Wei</div>
+<div class="pub-venue">ACM TOG, 2025</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/IJCV-pointsea.png" alt="PointSea"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://link.springer.com/article/10.1007/s11263-025-02400-y" target="_blank">PointSea: Point Cloud Completion via Self-Structure Augmentation</a></div>
+<div class="pub-authors">Zhe Zhu, <span class="pub-author-marker">Honghua Chen</span>, Xing He, and Mingqiang Wei</div>
+<div class="pub-venue">IJCV, 2025 [<a href="https://github.com/czvvd/SVDFormer_PointSea" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/PointCG-TVCG.png" alt="PointCG"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10829816/" target="_blank">PointCG: Self-Supervised Point Cloud Learning via Joint Completion and Generation</a></div>
+<div class="pub-authors">Yun Liu, Peng Li, Xuefeng Yan, Liangliang Nan, Bing Wang, <span class="pub-author-marker">Honghua Chen</span>, Lina Gong, Wei Zhao, and Mingqiang Wei</div>
+<div class="pub-venue">IEEE TVCG, 2025 [<a href="https://github.com/lemon1093642612/PointCG" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/PathNet.png" alt="PathNet"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://scholar.google.com/scholar?q=PathNet+Path-selective+point+cloud+denoising" target="_blank">PathNet: Path-Selective Point Cloud Denoising</a></div>
+<div class="pub-authors">Zeyong Wei, <span class="pub-author-marker">Honghua Chen<sup>†</sup></span>, Liangliang Nan, Jun Wang, Jing Qin, and Mingqiang Wei<sup>†</sup></div>
+<div class="pub-venue">IEEE TPAMI, 2024 [<a href="https://github.com/ZeyongWei/PathNet" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/TOMM.png" alt="Mesh Denoising Survey"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3625098" target="_blank">Geometric and Learning-Based Mesh Denoising: A Comprehensive Survey</a></div>
+<div class="pub-authors"><span class="pub-author-marker">Honghua Chen</span>, Zhiqi Li, Mingqiang Wei, and Jun Wang</div>
+<div class="pub-venue">ACM TOMM, 2023 [<a href="https://github.com/chenhonghua/Mesh-Denoiser" target="_blank">data</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/CSDN.png" alt="CSDN"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10015045/" target="_blank">CSDN: Cross-Modal Shape-Transfer Dual-Refinement Network for Point Cloud Completion</a></div>
+<div class="pub-authors">Zhe Zhu, Liangliang Nan, Haoran Xie, <span class="pub-author-marker">Honghua Chen</span>, Jun Wang, Mingqiang Wei, and Jing Qin</div>
+<div class="pub-venue">IEEE TVCG, 2023 [<a href="https://github.com/czvvd/CSDN" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/teaser_ICCV2023.png" alt="SVDFormer"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="http://openaccess.thecvf.com/content/ICCV2023/html/Zhu_SVDFormer_Complementing_Point_Cloud_via_Self-view_Augmentation_and_Self-structure_Dual-generator_ICCV_2023_paper.html" target="_blank">SVDFormer: Complementing Point Cloud via Self-View Augmentation and Self-Structure Dual-Generator</a></div>
+<div class="pub-authors">Zhe Zhu, <span class="pub-author-marker">Honghua Chen</span>, Xing He, Weiming Wang, Jing Qin, and Mingqiang Wei</div>
+<div class="pub-venue">ICCV, 2023 [<a href="https://github.com/czvvd/SVDFormer_PointSea" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/RefineNet.png" alt="Refine-Net"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9693131/" target="_blank">Refine-Net: Normal Refinement Neural Network for Noisy Point Clouds</a></div>
+<div class="pub-authors">Haoran Zhou, <span class="pub-author-marker">Honghua Chen</span>, Yingkui Zhang, Mingqiang Wei, Haoran Xie, Jun Wang, Tong Lu, Jing Qin, and Xiaoping Zhang</div>
+<div class="pub-venue">IEEE TPAMI, 2022 [<a href="https://github.com/hrzhou2/refinenet" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/RePCD-Net.png" alt="RePCD-Net"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://link.springer.com/article/10.1007/s11263-021-01564-7" target="_blank">RePCD-Net: Feature-Aware Recurrent Point Cloud Denoising Network</a></div>
+<div class="pub-authors"><span class="pub-author-marker">Honghua Chen</span>, Zeyong Wei, Xianzhi Li, Yabin Xu, Mingqiang Wei, and Jun Wang</div>
+<div class="pub-venue">IJCV, 2021 [<a href="https://github.com/chenhonghua/RePCD-Net" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/GeoDualCNN.png" alt="GeoDualCNN"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9543583/" target="_blank">GeoDualCNN: Geometry-Supporting Dual Convolutional Neural Network for Noisy Point Clouds</a></div>
+<div class="pub-authors">Mingqiang Wei<sup>‡</sup>, <span class="pub-author-marker">Honghua Chen<sup>‡</sup></span>, Yingkui Zhang, Haoran Xie, Yanwen Guo, and Jun Wang</div>
+<div class="pub-venue">IEEE TVCG, 2021</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/CVPR2020.png" alt="Normal Estimation"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="http://openaccess.thecvf.com/content_CVPR_2020/html/Zhou_Geometry_and_Learning_Co-Supported_Normal_Estimation_for_Unstructured_Point_Cloud_CVPR_2020_paper.html" target="_blank">Geometry and Learning Co-Supported Normal Estimation for Unstructured Point Cloud</a></div>
+<div class="pub-authors">Haoran Zhou<sup>‡</sup>, <span class="pub-author-marker">Honghua Chen<sup>‡</sup></span>, Yidan Feng, Qiong Wang, Jing Qin, Haoran Xie, Fu Lee Wang, Mingqiang Wei, and Jun Wang</div>
+<div class="pub-venue">CVPR, 2020 [<a href="https://github.com/hrzhou2/NH-Net-master" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/CAD-2019.png" alt="Mesh Texture Smoothing"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0010448519302088" target="_blank">Structure-Guided Shape-Preserving Mesh Texture Smoothing via Joint Low-Rank Matrix Recovery</a></div>
+<div class="pub-authors"><span class="pub-author-marker">Honghua Chen</span>, Jin Huang, Oussama Remil, Haoran Xie, Jing Qin, Yanwen Guo, Mingqiang Wei, and Jun Wang</div>
+<div class="pub-venue">CAD, 2019</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/TVCG-MPPCD.png" alt="MPPCD"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/8730533/" target="_blank">Multi-Patch Collaborative Point Cloud Denoising via Low-Rank Recovery with Graph Constraint</a></div>
+<div class="pub-authors"><span class="pub-author-marker">Honghua Chen</span>, Mingqiang Wei, Yangxing Sun, Xingyu Xie, and Jun Wang</div>
+<div class="pub-venue">IEEE TVCG, 2019 [<a href="https://github.com/chenhonghua/MPPCD" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr class="section-row"><td colspan="2"><div class="section-title">3D Analysis and Industry-Level Application</div></td></tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/partsam.png" alt="PartSAM"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://arxiv.org/abs/2509.21965" target="_blank">PartSAM: A Scalable Promptable Part Segmentation Model Trained on Native 3D Data</a></div>
+<div class="pub-authors">Zhe Zhu, Le Wan, Rui Xu, Yiheng Zhang, <span class="pub-author-marker">Honghua Chen</span>, Zhiyang Dou, Cheng Lin, Yuan Liu, and Mingqiang Wei</div>
+<div class="pub-venue">ICLR, 2026 [<a href="https://github.com/czvvd/PartSAM" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/CVPR2025-teaser.png" alt="STAR-Edge"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://scholar.google.com/scholar?q=STAR-Edge+Structure-aware+Local+Spherical+Curve+Representation" target="_blank">STAR-Edge: Structure-Aware Local Spherical Curve Representation for Thin-Walled Edge Extraction</a></div>
+<div class="pub-authors"><span class="pub-author-marker">Zikuan Li<sup>‡</sup></span>, <span class="pub-author-marker">Honghua Chen<sup>‡</sup></span>, Yuecheng Wang, Sibo Wu, Mingqiang Wei, and Jun Wang</div>
+<div class="pub-venue">CVPR, 2025 [<a href="https://github.com/Miraclelzk/STAR-Edge" target="_blank">code</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/CHEN-TIM2.png" alt="Aircraft Skin Countersink Primitive Extraction"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10597639/" target="_blank">Aircraft Skin Countersink Primitive Extraction from 3-D Measurement Point Clouds via Deep Clustering and Fitting</a></div>
+<div class="pub-authors">Mengqi Chen, Laishui Zhou, Yongming Zhang, <span class="pub-author-marker">Honghua Chen</span>, and Jun Wang</div>
+<div class="pub-venue">IEEE TIM, 2024 [<a href="https://drive.google.com/drive/folders/1hqxGW4sbhq6v9S1b7fUyH26DTbOVJRQQ?usp=sharing" target="_blank">data</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/CHEN-TIM1.png" alt="Thin-Walled Aircraft Panel Edge Extraction"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10458949/" target="_blank">Thin-Walled Aircraft Panel Edge Extraction from 3-D Measurement Surfaces via Feature-Aware Displacement Learning</a></div>
+<div class="pub-authors">Mengqi Chen, Laishui Zhou, <span class="pub-author-marker">Honghua Chen</span>, and Jun Wang</div>
+<div class="pub-venue">IEEE TIM, 2024 [<a href="https://github.com/chenhonghua/Feature-line-extraction" target="_blank">data</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/Wang-TIM21.png" alt="Wing-Fuselage Assembly Coordination"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9812938/" target="_blank">Combined Measurement Based Wing-Fuselage Assembly Coordination via Multiconstraint Optimization</a></div>
+<div class="pub-authors">Yan Wang, Yuanpeng Liu, <span class="pub-author-marker">Honghua Chen</span>, Qian Xie, Kaijun Zhang, and Jun Wang</div>
+<div class="pub-venue">IEEE TIM, 2022</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/CHEN-TASE2022.png" alt="Multi-Scale Feature Line Extraction"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9351738/" target="_blank">Multi-Scale Feature Line Extraction from Raw Point Clouds Based on Local Surface Variation and Anisotropic Contraction</a></div>
+<div class="pub-authors"><span class="pub-author-marker">Honghua Chen</span>, Yaoran Huang, Qian Xie, Yuanpeng Liu, Yuan Zhang, Mingqiang Wei, and Jun Wang</div>
+<div class="pub-venue">IEEE TASE, 2022 [<a href="https://github.com/chenhonghua/Feature-line-extraction" target="_blank">data</a>]</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/jxgcxb22.png" alt="飞机表面多圆孔基元提取"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://qikan.cmes.org/jxgcxb/CN/article/downloadArticleFile.do?attachType=PDF&id=62562" target="_blank">基于三维点云深度学习的飞机表面多圆孔基元提取方法</a></div>
+<div class="pub-authors">陈红华, 魏泽勇, 谢乾, 魏明强, and 汪俊</div>
+<div class="pub-venue">机械工程学报, 2022</div>
+</td>
+</tr>
+<tr>
+<td><div class="pub-thumb"><img src="./paperinfo/CAD-rivet.png" alt="Aircraft Skin Rivet Detection"></div></td>
+<td class="pub-content">
+<div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0010448519305378" target="_blank">Aircraft Skin Rivet Detection Based on 3D Point Cloud via Multiple Structures Fitting</a></div>
+<div class="pub-authors">Qian Xie, Dening Lu, Kunpeng Du, Jinxuan Xu, Jiajia Dai, <span class="pub-author-marker">Honghua Chen</span>, and Jun Wang</div>
+<div class="pub-venue">CAD, 2020</div>
+</td>
+</tr>
+</tbody>
 </table>
-
 
 <h2>Honors &amp; Awards</h2>
 <table style="border-spacing:2px">
@@ -419,9 +592,9 @@
 <h2>Professional Service</h2>
 <table id="reviewer" border="0" width="100%">
 	<tbody>
-		<tr>
-			<td> CVPR, ECCV, ICCV, SIGGRAPH, IEEE TPAMI/TVCG/TASE/TMM/TNNLS, CAD, Pattern Recognition, The Visual Computer, Computer & Graphics, Measurement, CAD/CG 2020</td>
-		</tr>
+		<tr><td>Pacific Graphics 2026 Program Committee</td></tr>
+		<tr><td>ACM TOMM (SCI &amp; CCF B) Special Issue Guest Editor</td></tr>
+		<tr><td>Reviewer: ICLR, ICML, AAAI, CVPR, ECCV, ICCV, SIGGRAPH, IEEE TPAMI/TIP/TVCG/TASE/TMM/TNNLS, IJCV, CAD, Pattern Recognition, The Visual Computer, Computer &amp; Graphics, Measurement, CAD/CG 2020</td></tr>
 		
 	</tbody>
 </table>
@@ -444,4 +617,37 @@
 
 
 </div>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+  var sections = document.querySelectorAll(".publication-list .section-row");
+
+  function setSectionCollapsed(sectionRow, collapsed) {
+    sectionRow.classList.toggle("collapsed", collapsed);
+    sectionRow.setAttribute("aria-expanded", collapsed ? "false" : "true");
+
+    var row = sectionRow.nextElementSibling;
+    while (row && !row.classList.contains("section-row")) {
+      row.style.display = collapsed ? "none" : "";
+      row = row.nextElementSibling;
+    }
+  }
+
+  sections.forEach(function (sectionRow) {
+    sectionRow.setAttribute("role", "button");
+    sectionRow.setAttribute("tabindex", "0");
+    sectionRow.setAttribute("aria-expanded", "true");
+
+    sectionRow.addEventListener("click", function () {
+      setSectionCollapsed(sectionRow, !sectionRow.classList.contains("collapsed"));
+    });
+
+    sectionRow.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        setSectionCollapsed(sectionRow, !sectionRow.classList.contains("collapsed"));
+      }
+    });
+  });
+});
+</script>
 </body></html>
