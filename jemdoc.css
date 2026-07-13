@@ -67,40 +67,47 @@ body {
 
 .page-nav {
 	position: sticky;
-	top: 0;
+	top: 8px;
 	z-index: 5;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.45em;
+	justify-content: center;
+	gap: 0.35em;
 	align-items: center;
-	margin: 1.1em 0 1.8em;
-	padding: 0.55em 0;
-	background: rgba(255, 255, 255, 0.94);
-	border-top: 1px solid #e6eaf0;
-	border-bottom: 1px solid #e6eaf0;
-	backdrop-filter: blur(6px);
+	margin: 1.2em auto 1.9em;
+	padding: 0.38em;
+	background: rgba(246, 248, 250, 0.92);
+	border: 1px solid #e1e6ec;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(38, 50, 56, 0.06);
+	backdrop-filter: blur(8px);
 }
 
 .page-nav a {
 	display: inline-flex;
 	align-items: center;
-	padding: 0.28em 0.62em;
-	border-radius: 4px;
+	justify-content: center;
+	padding: 0.36em 0.78em;
+	border: 1px solid transparent;
+	border-radius: 6px;
 	color: #526475;
 	font-size: 0.88rem;
 	font-weight: 550;
 	line-height: 1.35;
 	white-space: nowrap;
+	transition: color 0.16s ease, background 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
 }
 
 .page-nav a:hover {
 	color: #2f5f8f;
-	background: #f3f6f9;
+	background: #ffffff;
+	border-color: #d7e0e8;
 	border-bottom: none;
+	transform: translateY(-1px);
 }
 
 h2[id] {
-	scroll-margin-top: 4.2em;
+	scroll-margin-top: 5em;
 }
 
 #layout-menu a {
