@@ -14,6 +14,7 @@ body {
 */
 html {
   background-color: #f4f5f7;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -61,7 +62,45 @@ body {
     border: none;
     background: white;
     text-align: left;
-    vertical-align: top;
+	vertical-align: top;
+}
+
+.page-nav {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45em;
+	align-items: center;
+	margin: 1.1em 0 1.8em;
+	padding: 0.55em 0;
+	background: rgba(255, 255, 255, 0.94);
+	border-top: 1px solid #e6eaf0;
+	border-bottom: 1px solid #e6eaf0;
+	backdrop-filter: blur(6px);
+}
+
+.page-nav a {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.28em 0.62em;
+	border-radius: 4px;
+	color: #526475;
+	font-size: 0.88rem;
+	font-weight: 550;
+	line-height: 1.35;
+	white-space: nowrap;
+}
+
+.page-nav a:hover {
+	color: #2f5f8f;
+	background: #f3f6f9;
+	border-bottom: none;
+}
+
+h2[id] {
+	scroll-margin-top: 4.2em;
 }
 
 #layout-menu a {
