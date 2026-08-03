@@ -287,6 +287,14 @@ div#footer-text {
 	height: auto;
 }
 
+.service-label {
+	display: inline-block;
+	min-width: 9.2em;
+	margin-right: 0.55em;
+	color: #526475;
+	font-weight: 650;
+}
+
 ul, ol, dl {
 	margin-top: 0.2em;
 	padding-top: 0;
