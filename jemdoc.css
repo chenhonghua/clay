@@ -277,6 +277,11 @@ div#footer-text {
 	letter-spacing: 0;
 }
 
+.visitor-map-note {
+	color: #9aa6b2;
+	font-size: 0.78rem;
+}
+
 .visitor-map:hover {
 	opacity: 0.95;
 }
